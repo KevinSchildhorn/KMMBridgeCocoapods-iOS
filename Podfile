@@ -2,7 +2,7 @@
 
 platform :ios, '16'
 
-source 'https://github.com/touchlab/KMMBridgeCocoaTest-releases.git'
+source 'git@github.com:KevinSchildhorn/KMMBridgeTest_Pods.git'
 
 target 'ios' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -12,7 +12,8 @@ target 'ios' do
   if ENV.include?("LOCAL_KOTLIN_PATH")
     pod 'allshared', :path => ENV["LOCAL_KOTLIN_PATH"]
   else
-    pod 'allshared', '0.1.0'
+    pod 'allshared', '0.1.0-github'
+    # pod 'allshared', '0.1.0-maven'
   end
 
   target 'iosTests' do
